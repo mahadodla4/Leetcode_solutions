@@ -43,7 +43,6 @@ class Solution
     //Function to remove duplicates from unsorted linked list.
     Node * removeDuplicates( Node *head) 
     {
-        
         struct Node *temp;
         temp=head;
         unordered_set<int>s;
@@ -57,12 +56,11 @@ class Solution
             }
             temp=temp->next;
         }
-        //cout << s.size() << endl;
         temp=head;
         struct Node* prev=NULL;
-        for(auto it:vc)
+        for(auto i:vc)
         {
-            temp->data = it;
+            temp->data = i;
             prev=temp;
             temp=temp->next;
         }
